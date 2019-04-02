@@ -7,6 +7,7 @@ def data_cleaning(url):
     4. Calls clean text, to clean the text reviews
     5. Drops old text review
     6. Calculates the sentiment 
+    7. Calls get_aspects to get key words
     
     
     '''
@@ -31,7 +32,9 @@ def data_cleaning(url):
     
     df['sentiment_score'] = df['clean_text'].apply(sentiment_analyzer_scores)
     
-    df['tokenized_text'] = df['clean_text'].apply(tokenize)
+    df['key_words'] = df['clean_text'].apply(get_aspects)
+    
+
     
     return df 
     
