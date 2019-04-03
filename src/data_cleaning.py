@@ -34,6 +34,7 @@ def data_cleaning(url):
     
     df['key_words'] = df['clean_text'].apply(get_aspects)
     
+    df['key_words'] = df['key_words'].apply(', '.join)
 
     
     return df 
