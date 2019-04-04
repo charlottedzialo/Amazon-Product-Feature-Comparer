@@ -104,6 +104,8 @@ def data_cleaning(url):
       'helpful_votes', 'total_votes', 'vine', 'verified_purchase',
       'review_headline', 'review_body', 'review_date'] 
 
+
+   ## GOING TO HAVE TO CHANGE THIS SO GETS THE TWO PRODUCT NAMES 
    df = pd.read_csv(url, sep = '\t', names = cols)
    df['review_text'] = df['review_headline']+". "+ df['review_body']
    df = pd.concat([df['product_id'], 
