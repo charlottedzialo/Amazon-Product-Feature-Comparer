@@ -3,12 +3,38 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestRegressor 
 import numpy as np
+import pandas as pd
+
+
+
+def sent_dict(prod_a, prod_b, lst):
+        
+    sent_dict_a = {}
+    sent_dict_b = {}
+    for word in lst:
+        sent_dict_a[word] = [prod_a[prod_a['key_words'].str.contains(word)]['sentiment_score'].mean(),
+                      prod_a[prod_a['key_words'].str.contains(word)]['key_words'].count()] 
+        
+        sent_dict_b[word] = [prod_b[prod_b['key_words'].str.contains(word)]['sentiment_score'].mean(),
+                      prod_b[prod_b['key_words'].str.contains(word)]['key_words'].count()] 
+        
+    df_a = pd.DataFrame.from_dict(sent_dict_a, orient='index', 
+                                  columns=['Product_A_avg_sentiment_score', 'Product_A_review_count'])
+    
+    df_b = pd.DataFrame.from_dict(sent_dict_b, orient='index',
+                                  columns=['Product_B_avg_sentiment_score', 'Product_B_review_count'])
+    
+    
+    result = pd.concat([df_a, df_b], axis=1)
+                       
+ 
+    return result
 
 
 
 
 
-def RF(product, vectorizer=CountVectorizer()):
+def RF(Product_A, Product_B, Product_AB, vectorizer=CountVectorizer()):
 
 
     ''' 
@@ -23,12 +49,12 @@ def RF(product, vectorizer=CountVectorizer()):
 
     #Returns train/test split 
     
-    y = product['sentiment_score']
+    y = Product_AB['sentiment_score']
 
 
     #Vectorizes data, and creates dictionary of {index:feature_name}
 
-    X = vectorizer.fit_transform(product['key_words'])
+    X = vectorizer.fit_transform(Product_AB['key_words'])
     
 
     L = vectorizer.get_feature_names() 
@@ -56,29 +82,7 @@ def RF(product, vectorizer=CountVectorizer()):
 
 #     df['Sentiment'] = df['Coeff'].apply(get_sentiment)
     
-    return top_ten_list
+    return sent_dict(Product_A, Product_B, top_ten_list)
+    
 
-
-def sent_dict(prod_a, prod_b, lst= Vec_Ridge(product_ab)):
-        
-    sent_dict_a = {}
-    sent_dict_b = {}
-    for word in lst:
-        sent_dict_a[word] = [prod_a[prod_a['key_words'].str.contains(word)]['sentiment_score'].mean(),
-                      prod_a[prod_a['key_words'].str.contains(word)]['key_words'].count()] 
-        
-        sent_dict_b[word] = [prod_b[prod_b['key_words'].str.contains(word)]['sentiment_score'].mean(),
-                      prod_b[prod_b['key_words'].str.contains(word)]['key_words'].count()] 
-        
-    df_a = pd.DataFrame.from_dict(sent_dict_a, orient='index', 
-                                  columns=['Product_A_avg_sentiment_score', 'Product_A_review_count'])
-    
-    df_b = pd.DataFrame.from_dict(sent_dict_b, orient='index',
-                                  columns=['Product_B_avg_sentiment_score', 'Product_B_review_count'])
-    
-    
-    result = pd.concat([df_a, df_b], axis=1)
-                       
- 
-    return result
 
