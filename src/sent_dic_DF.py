@@ -1,3 +1,6 @@
+
+import pandas as pd
+
 def sent_dict(prod_a, prod_b, lst):
     sent_dict_a = {}
     sent_dict_b = {}

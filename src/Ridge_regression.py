@@ -2,7 +2,9 @@
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import Ridge
-
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+import numpy as np
 
 def Vec_Ridge(product, vectorizer=CountVectorizer()):
 
@@ -44,15 +46,7 @@ def Vec_Ridge(product, vectorizer=CountVectorizer()):
     for i in top_ten:
         top_ten_list.append(Dict_features[i])
     
-    df = pd.DataFrame({'Feature_names':top_ten_list, 'Coeff': clf.coef_[top_ten]})
-
-    df['Sentiment'] = df['Coeff'].apply(get_sentiment)
     
-    return df
+    return top_ten_list
     
 
-def get_sentiment(value):
-    if value > 0: 
-        return "Postive"
-    else: 
-        return "Negative"

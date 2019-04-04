@@ -1,4 +1,14 @@
-sdef RF(product, vectorizer=CountVectorizer()):
+
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.ensemble import RandomForestRegressor 
+import numpy as np
+
+
+
+
+
+def RF(product, vectorizer=CountVectorizer()):
 
 
     ''' 
