@@ -9,7 +9,10 @@ The "Tell us how you really feel" application enables users to easily see the to
 # Modeling and Techniques
 
 Approach 1: Predicted review sentiment to determine key features with Random Forest and Ridge regression.
+
 Approach 2: Leveraged advanced NLP techniques and sentiment analysis to automatically extract and catagorize key noun phrases.
+
+![Image of Workflow](URL HERE)
 
 # Results
 
