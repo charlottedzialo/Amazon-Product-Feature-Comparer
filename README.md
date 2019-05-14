@@ -4,7 +4,7 @@ In today's competitive landscape, organizations are expected to deliver products
 
 Product reviews hold valuable insights into customer sentiment. These insights can be used for competitive analysis, product design, and user experience. However, with a large volume of reviews and a variety of channels, it is getting harder and harder to process customer feedback. To stay competitive, organizations need a quick and easy way to gauge what features customers like and dislike about a product.
 
-The "Tell us how you really feel" application enables users to easily see the top positive and negative features of a product derived directly from customer reviews. I used the iconic Amazon Product Review Dataset for this project. This dataset is collection 130+ million customer reviews written in the Amazon.com marketplace and associated metadata from 1995 until 2015.
+The "Tell us how you really feel" application enables users to easily see the top positive and negative features of a product derived directly from customer reviews. I used the iconic [Amazon Product Review Dataset](https://s3.amazonaws.com/amazon-reviews-pds/readme.html) for this project. This dataset is collection ***130+ million customer reviews*** written in the Amazon.com marketplace and associated metadata from 1995 until 2015.
 
 # Modeling and Techniques
 
