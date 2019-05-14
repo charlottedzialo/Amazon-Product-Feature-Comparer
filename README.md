@@ -16,4 +16,4 @@ Approach 2: Leveraged advanced NLP techniques and sentiment analysis to automati
 
 # Application 
 
-![Image of Workflow](https://github.com/charlottedzialo/Tell-us-how-you-really-feel/blob/master/Screen%20Shot%202019-05-13%20at%205.03.38%20PM.png)
+![Image of Workflow](https://github.com/charlottedzialo/Tell-us-how-you-really-feel/blob/master/App_image.png)
