@@ -1,2 +1,18 @@
-# Product comparison app 
-Application used to compare two products based specific features instead of product specs. Product features are extracted from user comments and categorized by user sentiment and rating. 
+# Tell us how you really feel.
+
+In today's competitive landscape, organizations are expected to deliver products that exceed customer expectations. Knowing what customers are talking about and understanding their problems and opinions is the foundation of many successful products.
+
+Product reviews hold valuable insights into customer sentiment. These insights can be used for competitive analysis, product design, and user experience. However, with a large volume of reviews and a variety of channels, it is getting harder and harder to process customer feedback. To stay competitive, organizations need a quick and easy way to gauge what features customers like and dislike about a product.
+
+The "Tell us how you really feel" application enables users to easily see the top positive and negative features of a product derived directly from customer reviews. I used the iconic Amazon Product Review Dataset for this project. This dataset is collection 130+ million customer reviews written in the Amazon.com marketplace and associated metadata from 1995 until 2015.
+
+# Modeling and Techniques
+
+Approach 1: Predicted review sentiment to determine key features with Random Forest and Ridge regression.
+Approach 2: Leveraged advanced NLP techniques and sentiment analysis to automatically extract and catagorize key noun phrases.
+
+# Results
+
+Advanced NLP with Spark provided the most relevant results compared to Random Forest and Ridge Regression models.
+
+
