@@ -12,10 +12,8 @@ Approach 1: Predicted review sentiment to determine key features with Random For
 
 Approach 2: Leveraged advanced NLP techniques and sentiment analysis to automatically extract and catagorize key noun phrases.
 
-![Image of Workflow](URL HERE)
+![Image of Workflow](https://github.com/charlottedzialo/Tell-us-how-you-really-feel/blob/master/Screen%20Shot%202019-05-13%20at%205.03.38%20PM.png)
 
-# Results
+# Application 
 
-Advanced NLP with Spark provided the most relevant results compared to Random Forest and Ridge Regression models.
-
-
+![Image of Workflow](https://github.com/charlottedzialo/Tell-us-how-you-really-feel/blob/master/Screen%20Shot%202019-05-13%20at%205.03.38%20PM.png)
