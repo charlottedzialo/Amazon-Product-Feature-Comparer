@@ -14,6 +14,12 @@ Approach 2: Leveraged advanced NLP techniques and sentiment analysis to automati
 
 ![Image of Workflow](https://github.com/charlottedzialo/Tell-us-how-you-really-feel/blob/master/Screen%20Shot%202019-05-13%20at%205.03.38%20PM.png)
 
-# Application 
+# Results 
 
-![Image of Workflow](https://github.com/charlottedzialo/Tell-us-how-you-really-feel/blob/master/App_image.png)
+Advanced NLP with Spark provided the most relevant results compared to Random Forest and Ridge Regression models.
+
+***Random Forest*** ----> tinny, attempts, connector, problem, stars, connection, speaker, waste, pot
+
+***Ridge Regression*** ----> connectivity, one, length, speaker, ipod, design, ipad, gift, item, speakers
+
+***Advanced NLP*** ----> great sound, good sound, hard understand, sound bad small device, happy purchase, speaker box                                  trouble, new pressure point volume, awesome, worth money, good range 
